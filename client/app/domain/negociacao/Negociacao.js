@@ -1,8 +1,7 @@
 class Negociacao {
   constructor(data, quantidade, valor) {
+    Object.assign(this, { quantidade, valor }); // Propriedades Literais
     this._data = new Date(data.getTime()); // Programação Defensiva
-    this._quantidade = quantidade;
-    this._valor = valor;
   }
 
   get data() {
